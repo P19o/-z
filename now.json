@@ -1,7 +1,7 @@
 {
     "version": 2,
-    "name": "zit2q",
+    "name": "boter",
     "builds": [
-        { "src": "index.js", "use": "@now/node" }
+        { "src": "server.js", "use": "@now/node" }
     ]
 }
