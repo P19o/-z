@@ -1,3 +1,25 @@
+// server.js
+// where your node app starts
+
+// init project
+const express = require('express');
+const app = express();
+
+// we've started you off with Express, 
+// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+
+// http://expressjs.com/en/starter/static-files.html
+app.use(express.static('public'));
+
+// http://expressjs.com/en/starter/basic-routing.html
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/views/index.html');
+});
+
+// listen for requests :)
+const listener = app.listen(process.env.PORT, function() {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
 const TelegramBot = require('node-telegram-bot-api');
 
 // replace the value below with the Telegram token you receive from @BotFather
@@ -25,13 +47,5 @@ bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
   // send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatId, 'Received your message from z');
+  bot.sendMessage(chatId, 'Received your message from zee');
 });
-
-var http = require('http');
-
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
