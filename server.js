@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-var http = require('http');
+
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '788097275:AAETloA4NOnpx32ZlIJLJrSBgzIQJya4M7s';
 
@@ -30,8 +30,3 @@ bot.on('message', (msg) => {
 
 
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(80); //the server object listens on port 8080
