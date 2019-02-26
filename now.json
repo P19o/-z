@@ -2,6 +2,7 @@
     "version": 2,
     "name": "ps",
     "builds": [
+        { "src": "index.html", "use": "@now/html-minifier" },
         { "src": "server.js", "use": "@now/node" }
     ]
 }
