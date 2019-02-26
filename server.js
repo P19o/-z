@@ -28,17 +28,10 @@ bot.on('message', (msg) => {
   bot.sendMessage(chatId, 'Received your message from z');
 });
 
-var http = require('http'),
-    fs = require('fs');
+var http = require('http');
 
-
-fs.readFile('./index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8080);
-});
+//create a server object:
+http.createServer(function (req, res) {
+  res.write('Hello World!'); //write a response to the client
+  res.end(); //end the response
+}).listen(8080); //the server object listens on port 8080
