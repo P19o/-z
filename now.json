@@ -1,16 +1,7 @@
 {
-  "name": "zitq",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "node-telegram-bot-api": "^0.30.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC"
+    "version": 2,
+    "name": "zit2q",
+    "builds": [
+        { "src": "index.js", "use": "@now/node" }
+    ]
 }
